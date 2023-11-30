@@ -15,6 +15,16 @@ export const styles = StyleSheet.create({
     starshipHead: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginBottom: 20
+        marginBottom: 4
+    },
+    distanceRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginBottom: 24
+    },
+    distanceText: {
+        fontSize: 16,
+        fontWeight: 'bold'
     }
 })
