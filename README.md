@@ -1,79 +1,34 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Take Home Project
 
-# Getting Started
+## Assumptions
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+- You're familiar with React (w/ Hooks), React Native, TypeScript & GraphQL.
+- Your React Native environment is setup for iOS and Android.
 
-## Step 1: Start the Metro Server
+## Instructions
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- Get a working iOS and Android app on the iOS Simulator and Android Emulator to demo.
+- Please make Git commits on each task and sub-task.
+- Once you are done, send the solution back to `ian@truenorthfleet.com`
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Tasks
 
-```bash
-# using npm
-npm start
+### Task 1: Create a blank TypeScript React Native Project called `TakeHome`
 
-# OR using Yarn
-yarn start
-```
+- With the React Native CLI (Not Expo)
+- With [Hermes JS engine](https://hermesengine.dev)
+- With identifier `dev.takehome`
+- With version `1.0.0`
 
-## Step 2: Start your Application
+### Task 2: Install [Apollo GraphQL Client](https://www.apollographql.com/docs/react/get-started)
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### Task 3: Make a query to [SWAPI (Star Wars API)](https://studio.apollographql.com/public/star-wars-swapi/home?_gl=1%2A1iouxut%2A_ga%2AMTk5NjUzODE1NC4xNjU1OTE1MjI4%2A_ga_0BGG5V2W2K%2AMTY1NTkxNTIzMC4xLjEuMTY1NTkxNjQxMi4w&variant=current)Â 
 
-### For Android
+- Display all the Starships in a [FlatList](https://reactnative.dev/docs/flatlist)
+- Make types for Starships & all returned data
 
-```bash
-# using npm
-npm run android
+### Task 4: Get your Distance to Star Wars Land (in CA)
 
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Ask for Geolocation Permissions ([react-native-permissions](https://github.com/zoontek/react-native-permissions))
+- Get current geolocation of user ([react-native-geolocation-service](https://github.com/Agontuk/react-native-geolocation-service#usage))
+  Use [geolib to get your distance](https://github.com/manuelbieh/geolib#getdistancestart-end-accuracy--1) (in [miles](https://github.com/manuelbieh/geolib#convertdistancevalue-unit)) from your location to Star Wars Land (`33.814831976267016, -117.92057887641796`)
